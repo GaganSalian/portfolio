@@ -29,3 +29,18 @@ tl
    delay: -0.5,
    marginTop: "0%"
 })
+
+gsap.from(".header-text", {
+  duration: 1.5,
+  y: 50,
+  opacity: 0,
+  ease: "power3.out",
+});
+
+gsap.to(".work-msg", {
+  delay: 2,
+  opacity: 1,
+  y: 0,
+  duration: 1.2,
+  ease: "power3.out"
+});
