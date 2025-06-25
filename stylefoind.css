@@ -531,7 +531,8 @@ ul {
 
 .contact-left {
   flex-basis: 35%;
-  text-align:center
+  text-align:center;
+  margin-top:20px;
 }
 
 .contact-right {
