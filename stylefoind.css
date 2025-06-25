@@ -531,10 +531,12 @@ ul {
 
 .contact-left {
   flex-basis: 35%;
+  text-align:center
 }
 
 .contact-right {
   flex-basis: 60%;
+  text-align:center
 }
 
 .contact-left p {
