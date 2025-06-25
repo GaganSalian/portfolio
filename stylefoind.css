@@ -524,6 +524,10 @@ ul {
 
 /*-------------------------contact----------------*/
 
+#contact{
+ justify-content: center;
+}
+
 .contact-left {
   flex-basis: 35%;
 }
