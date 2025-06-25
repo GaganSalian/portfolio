@@ -462,6 +462,7 @@ ul {
   color: #fefdfd;
   display: flex;
   justify-content: center;
+  font-family: 'Inter', sans-serif;
 }
 .about-container {
   max-width: 800px;
