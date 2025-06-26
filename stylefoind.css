@@ -188,6 +188,17 @@ ul {
 .contents-right img{
    width: 300px;
 }
+.floating-image {
+  width: 350px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 .role {
   font-size: 1.1rem;
   color: #38bdf8;
