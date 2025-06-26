@@ -538,6 +538,7 @@ ul {
 
 .contact{
   height:100vh;
+  padding:45px;
 }
 .row{
  justify-content: center;
