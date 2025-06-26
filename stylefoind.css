@@ -537,8 +537,8 @@ ul {
 /*-------------------------contact----------------*/
 
 .contact{
-  height:100vh;
-  padding:45px;
+/*   height:100vh; */
+  padding:60px;
 }
 .row{
  justify-content: center;
