@@ -104,27 +104,27 @@ window.addEventListener('resize', () => {
 
 
 
-  const roles = ["MERN Stack Developer", "React Enthusiast", "Node.js Backend Builder", "Clean Code Lover"];
-  let index = 0;
-  let charIndex = 0;
-  const roleElement = document.getElementById("typing-role");
+  // const roles = ["MERN Stack Developer", "React Enthusiast", "Node.js Backend Builder", "Clean Code Lover"];
+  // let index = 0;
+  // let charIndex = 0;
+  // const roleElement = document.getElementById("typing-role");
 
-  function typeRole() {
-    if (charIndex < roles[index].length) {
-      roleElement.textContent += roles[index].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeRole, 70);
-    } else {
-      setTimeout(() => {
-        roleElement.textContent = "";
-        charIndex = 0;
-        index = (index + 1) % roles.length;
-        typeRole();
-      }, 1500);
-    }
-  }
+  // function typeRole() {
+  //   if (charIndex < roles[index].length) {
+  //     roleElement.textContent += roles[index].charAt(charIndex);
+  //     charIndex++;
+  //     setTimeout(typeRole, 70);
+  //   } else {
+  //     setTimeout(() => {
+  //       roleElement.textContent = "";
+  //       charIndex = 0;
+  //       index = (index + 1) % roles.length;
+  //       typeRole();
+  //     }, 1500);
+  //   }
+  // }
 
-  document.addEventListener("DOMContentLoaded", typeRole);
+  // document.addEventListener("DOMContentLoaded", typeRole);
 
 
 
