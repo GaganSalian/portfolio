@@ -44,3 +44,59 @@ gsap.to(".work-msg", {
   duration: 1.2,
   ease: "power3.out"
 });
+
+
+
+
+const canvas = document.getElementById('stars-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+function Star() {
+  this.x = Math.random() * canvas.width;
+  this.y = Math.random() * canvas.height;
+  this.radius = Math.random() * 1.5;
+  this.alpha = Math.random();
+  this.speed = Math.random() * 0.5;
+  this.twinkle = Math.random() * 0.05;
+}
+
+Star.prototype.draw = function () {
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+  ctx.fill();
+};
+
+Star.prototype.update = function () {
+  this.alpha += this.twinkle;
+  if (this.alpha <= 0 || this.alpha >= 1) this.twinkle = -this.twinkle;
+  this.draw();
+};
+
+function createStars(num) {
+  for (let i = 0; i < num; i++) {
+    stars.push(new Star());
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(star => star.update());
+  requestAnimationFrame(animate);
+}
+
+createStars(200); // Number of stars
+animate();
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  stars = [];
+  createStars(200);
+});
+
