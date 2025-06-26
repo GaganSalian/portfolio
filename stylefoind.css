@@ -549,13 +549,15 @@ ul {
   flex-basis: 35%;
   text-align:center;
   margin-top:60px;
+  margin-left:30px;
+  
 }
 
 .contact-right {
   flex-basis: 60%;
   text-align:center;
    margin-top:50px;
-  margin-right:60px;
+ 
 }
 
 .contact-left p {
