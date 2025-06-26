@@ -708,10 +708,4 @@ div .star {
   display: block;
 }
 
-        .star {
-      position: absolute;
-      top: 25px;
-      left: 10px;
-      cursor: pointer;
-      padding-left: 300px;
-  }
+      
