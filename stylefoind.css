@@ -548,14 +548,14 @@ ul {
 .contact-left {
   flex-basis: 35%;
   text-align:center;
-  margin-top:40px;
+  margin-top:60px;
 }
 
 .contact-right {
   flex-basis: 60%;
   text-align:center;
    margin-top:50px;
-  margin-right:30px;
+  margin-right:60px;
 }
 
 .contact-left p {
