@@ -467,7 +467,9 @@ ul {
 #about {
 /*   padding-top:20px; */
   padding: 20px 40px;
+  adding-bottom: 0px;
 /*   background: #151515; */
+  width:90%;
   color: #fefdfd;
   display: flex;
   justify-content: center;
