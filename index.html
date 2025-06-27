@@ -10,14 +10,13 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-      <canvas id="stars-canvas"></canvas>
-
+  <canvas id="stars-canvas"></canvas>
     <div id="pre-loader"></div>
-
-        <div id="header">
-            <div class="container">
-                    <nav style="padding-left: 25px;">
-                    <h3 class="touch">
+      <!-------------------------Hero-section------------------------->
+      <div id="header">
+        <div class="container">
+          <nav class="navbar" >
+            <h3 class="touch">
                         <span>G</span>
                         <span>a</span>
                         <span>g</span>
@@ -29,19 +28,25 @@
                         <span>i</span>
                         <span>a</span>
                         <span>n</span>
-                    </h3>
-                    <ul id="sidemenu">
-                        <i class="fa-solid fa-xmark star" onclick="closemenu()"></i>
-                        <li class="LIST"> <a href="#header">
-                            <div class="touch">
+            </h3>
+            <div class="menu-toggle" id="menu-toggle">
+              <i class="fas fa-bars"></i>
+              </div>
+            
+            <ul id="sidemenu" class="nav-menu">
+                <li class="LIST">
+                  <a href="#header" class="nav-link">
+                    <div class="touch">
                                 <span>H</span>
                                 <span>O</span>
                                 <span>M</span>
                                 <span>E</span>
-                            </div>
-                        </a></li>
-                        <li> <a href="#top">
-                            <div class="touch">
+                    </div>
+                  </a>
+                </li>
+                <li> 
+                  <a href="#top" class="nav-link">
+                    <div class="touch">
                                 <span>P</span>
                                 <span>R</span>
                                 <span>O</span>
@@ -52,12 +57,11 @@
                                 <span>S</span>
                                 
                                 
-                            </div>
-                            
-                        </a></li>
-                        
-                        <li> <a href="#about">
-
+                    </div>
+                  </a>
+                </li>
+                <li> 
+                  <a href="#about" class="nav-link">
                      <div class="touch">
                         <span>A</span>
                         <span>B</span>
@@ -67,11 +71,11 @@
                         <span>-</span> 
                         <span>M</span>
                         <span>E</span>
-                    </div>
-                
-                </a></li>
-                  <li> <a href="#contact">
-
+                     </div>
+                  </a>
+                </li>
+                <li> 
+                  <a href="#contact" class="nav-link">
                     <div class="touch">
                         <span>C</span>
                         <span>O</span>
@@ -79,215 +83,116 @@
                         <span>T</span>
                         <span>A</span>
                         <span>C</span> 
-                        
                         <span>T</span>
                     </div>
-                </a></li>
-                  </ul>
-                </nav>
-                
-                 <i class="fa-solid fa-bars star " onclick="openmenu()"></i>
-                 
-<!--             <div class="header-text">
-  <p class="role">Full-Stack Developer</p>
-  <p class="role">React- Developer</p>
-  <p class="role">Node.js- Developer</p>
-  <h1 class="intro">
-    Hi, I'm <span>Gagan</span><br>
-    <span class="work-msg">Ready to work with you</span>
-  </h1>
-</div> -->
-                <div class="hero-section">
-  <div class="contents-left">
+                  </a>
+                </li>
+            </ul>
+          </nav>
+          <div class="hero-section">
+              <div class="contents-left">
     <p class="role"><span id="typing-role"></span></p>
     <h1 class="headline">Hi, I'm <span class="highlight">Gagan</span><br>Full-Stack Developer</h1>
     <p class="tagline">I design and build clean, scalable, and user-friendly web applications using the MERN stack — React, Node.js, MongoDB, and Express.</p>
     <a href="#contact" class="cta-button">Hire Me</a>
-  </div>
-                    <div class="contents-right">
-                        <img class="floating-image" src="image/astronut.png" alt="astro">
-                        </div>
-</div>
-
-
-            </div>
+              </div>
+              <div class="contents-right">
+                <img class="floating-image" src="image/astronut.png" alt="astro">
+              </div>
+          </div>
         </div>
-               
-       
-   
+      </div>  
   <!-------------------------projests------------------------->
   <div id="main">
-        <div id="top">
+    <div id="top">
             <h1 id="top-h1">PROJECTS</h1>
-        </div>
-        <div id="center">
-            <div class="content">
-                
-                <div class="services-list">
-                  <a href="https://swiggy-fire-23cn3jeqr-gagansalians-projects.vercel.app/" style="text-decoration: none; color: inherit;">
-                    <div style="padding: 10px;" >
-                      <div style="background-image: url('./image/2.png'); background-size: cover; background-position: 10px;  
-      color: white;
-      height: 300px;
-      width: 340px;
-      position: relative;
-  
-      left: 20px;
-      "></div>
-                        <!-- <i class="fa-solid fa-code"></i> -->
-                        <h2>swiggy </h2>
-                        <p>Food Delivery App,  Online Food Ordering Platform
-                        </p>
-                        
-                    </div>
-                    </a>
-                 <a href="https://swiggy-fire-23cn3jeqr-gagansalians-projects.vercel.app/" style="text-decoration: none; color: inherit;">
-                    <div style="padding: 10px;" >
-                      <div style="background-image: url('./image/3.png'); background-size: cover; background-position: 10px;    
-      color: white;
-      height: 300px;
-      width: 340px;
-      position: relative;
-      
-      left: 20px;"></div>
-                        <!-- <i class="fa-solid fa-code"></i> -->
-                        <h2>youtube </h2>
-                        <p>chating and video streaming platform...
-                        </p>
-                        
-                    </div>
-                    </a>
-                    <a href="https://netflix-gpt-alpha-six.vercel.app/" style="text-decoration: none; color: inherit; justify-items: center;">
-                    <div style="padding: 10px;" >
-                      <div style="background-image: url('./image/1.png'); background-size: cover; background-position: 10px;    
-      color: white;
-      height: 300px;
-      width: 340px;
-      position: relative;
-      
-      left: 20px;"></div>
-                        <!-- <i class="fa-solid fa-code"></i> -->
-                        <h2>Netflix GPT Platform </h2>
-                        <p>Built an AI-driven movie and video streaming platform...
-                        </p>
-                        
-                    </div>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-        <div id="bottom">
-            <h1 id="bottom-h1">PROJECTS</h1>
-        </div>
     </div>
+      <div id="center">
+        <div class="content">
+          <div class="services-list">
+            <a href="https://swiggy-fire-23cn3jeqr-gagansalians-projects.vercel.app/" style="text-decoration: none; color: inherit;">
+              <div style="padding: 10px;" >
+                <div style="background-image: url('./image/2.png'); background-size: cover; background-position: 10px; color: white; height: 300px; width: 340px; position: relative;left: 20px;">
+                </div>
+                  <!-- <i class="fa-solid fa-code"></i> -->
+                  <h2>swiggy </h2>
+                  <p>Food Delivery App,  Online Food Ordering Platform
+                  </p>
+              </div>
+            </a>
+            <a href="https://swiggy-fire-23cn3jeqr-gagansalians-projects.vercel.app/" style="text-decoration: none; color: inherit;">
+              <div style="padding: 10px;" >
+                <div style="background-image: url('./image/3.png'); background-size: cover; background-position: 10px;color: white; height: 300px; width: 340px; position: relative; left: 20px;">
+                </div>
+                  <!-- <i class="fa-solid fa-code"></i> -->
+                  <h2>youtube </h2>
+                  <p>chating and video streaming platform...
+                  </p>
+               </div>
+            </a>
+            <a href="https://netflix-gpt-alpha-six.vercel.app/" style="text-decoration: none; color: inherit; justify-items: center;">
+              <div style="padding: 10px;" >
+                <div style="background-image: url('./image/1.png'); background-size: cover; background-position: 10px; color: white; height: 300px; width: 340px;position: relative;left: 20px;">
+                </div>
+                  <!-- <i class="fa-solid fa-code"></i> -->
+                  <h2>Netflix GPT Platform </h2>
+                  <p>Built an AI-driven movie and video streaming platform...
+                  </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    <div id="bottom">
+          <h1 id="bottom-h1">PROJECTS</h1>
+    </div>
+  </div>
   <!----------------------about---------------------------------------------------------------------------------->
   <div id="about">
     <div class="container">
-       <div class="row">
+      <div class="row">
         <div class="about-col-1">
           <img src="image/5.JPG" alt="gdedd">
-          </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-<p>I completed my BCA degree in 2024 and have since been deeply immersed in full-stack web development using the MERN stack. Over the past six months, I’ve been building dynamic and responsive frontend applications with React, while also developing robust backend systems using Node.js and Express, connected to MongoDB for efficient data management.</p>
-
-<p>Alongside development, I’m consistently sharpening my problem-solving abilities by practicing Data Structures and Algorithms (DSA), with a strong focus on writing clean, efficient code and preparing for technical interviews.</p>
-
-                
-                </div>
-            </div>
         </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+            <p>I completed my BCA degree in 2024 and have since been deeply immersed in full-stack web development using the MERN stack. Over the past six months, I’ve been building dynamic and responsive frontend applications with React, while also developing robust backend systems using Node.js and Express, connected to MongoDB for efficient data management.</p>
+            <p>Alongside development, I’m consistently sharpening my problem-solving abilities by practicing Data Structures and Algorithms (DSA), with a strong focus on writing clean, efficient code and preparing for technical interviews.</p>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 <!---------------------------contact-form-------------------------------------------------->
-<div id="contact">
+  <div id="contact">
     <div class="container">
       <div class="row">
         <div class="contact-left">
           <h1 class="sub-title">Contact-me</h1>
           <p><i class="fa-solid fa-paper-plane"></i>gagansalian04102005@gmail.com</p>
           <p><i class="fa-solid fa-square-phone"></i>6361140918</p>
-          <div class="social-icons">
+            <div class="social-icons">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-twitter-square"></i></a>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href=""><i class="fa-brands fa-linkedin"></i></a>
-
-
-          </div>
-<!--           <a href="image/cv1.html" download class="btn btn2">Download CV</a> -->
+            </div>
         </div>
-<!--           <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="name" placeholder="your name" required>
-              <input type="email" name="email" placeholder="your email" required>
-              <textarea name="message"  rows="6" placeholder="your message"></textarea>
-              <button type="submit" class="btn btn2">submit</button>
-            </form>
-            <span id="msg"></span>
-          </div> -->
-          <div class="contact-right">
-              <img src="image/qr_img.png" alt="cvscan">
-               <a href="image/cv1.html" download class="btn btn2">Download CV</a>
-              </div>
-              
+        <div class="contact-right">
+            <img src="image/qr_img.png" alt="cvscan">
+            <a href="image/cv1.html" download class="btn2">Download CV</a>
+        </div>
+      </div>
     </div>
   </div>
     
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var tablinks=document.getElementsByClassName("tab-links");
-          var tabcontents=document.getElementsByClassName("tab-contents");
-    
-          function opentab(tabname){
-            for(tablink of tablinks){
-              tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-              tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-          }
-          </script>
-    
-          <script>
-            var sidemeu = document.getElementById("sidemenu");
-            function openmenu(){
-              sidemeu.style.right="0";
-            }
-            function closemenu(){
-              sidemeu.style.right="-220px";
-            }
-          </script>
-<!--     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby0XeWwdNl4NjwwoVZCGHMz4sOM-pVNTdQpXZiwfZumAAFldLkpMmm48AepISkL-9Wq/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {msg.innerHTML="Message Sent Successfully"
-          setTimeout(function(){
-            msg.innerHTML=""
-          },5000)
-          form.reset()
-        })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script> -->
-    
-    <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
      var  loader = document.getElementById("pre-loader");
      window.addEventListener("load", function(){
         loader.style.display="none";
      })
-    </script>
-    <script src="script.js"></script>
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
