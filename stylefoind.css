@@ -730,6 +730,7 @@ ul {
   }
 
   .hero-section .contents-left {
+     margin-top:100px;
     position: relative;
     z-index: 1;
     color: #fff;
