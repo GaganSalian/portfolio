@@ -123,9 +123,26 @@ window.addEventListener('resize', () => {
 
 
 // Toggle Side Menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+  const closeBtn = document.querySelector(".close-btn");
 
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  }
 });
+
