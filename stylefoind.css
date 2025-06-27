@@ -449,36 +449,48 @@ ul {
 
 /*-------------------------contact----------------*/
 
-#contact{
-  height:100vh;
-  padding-top:100px;
+#contact {
+  height: 100vh;
+  padding-top: 100px;
 }
-.row{
- justify-content: center;
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+ 
+  gap: 40px;
 }
+
 .contact-left {
   flex-basis: 35%;
-  text-align:center;
-  margin-top:60px;
-  margin-left:30px;
-  
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 30px;
 }
+
 .contact-right {
   flex-basis: 60%;
-  text-align:center;
-   margin-top:50px; 
+  text-align: center;
+  margin-top: 50px;
 }
+
 .contact-left p {
   margin-top: 30px;
 }
+
 .contact-left p i {
   color: #ff004f;
   margin-right: 15px;
   font-size: 25px;
 }
+
 .social-icons {
   margin-top: 30px;
 }
+
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
@@ -487,10 +499,12 @@ ul {
   display: inline-block;
   transition: transform 0.5s;
 }
+
 .social-icons a:hover {
   color: #ff004f;
   transform: translateY(-5px);
 }
+
 .btn2 {
   display: block;
   margin: 50px auto;
@@ -502,8 +516,12 @@ ul {
   color: #fff;
   transition: background 0.5s;
 }
+
 .btn2:hover {
   background: #ff004f;
+}
+.menu-toggle {
+  display: none;
 }
 
 
