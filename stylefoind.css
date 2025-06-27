@@ -1,3 +1,7 @@
+
+/* ======================
+   Font Definitions
+   ====================== */
 @font-face {
   font-family: Founder;
   src: url(FoundersGroteskCondensed-Bold.ttf);
@@ -13,6 +17,10 @@
   src: url(cardinalfruitweb-italic.ttf);
 }
 
+
+/* =======================
+   Global Reset & Defaults
+   ======================= */
 * {
     margin: 0;
     padding: 0;
@@ -21,43 +29,120 @@
     scroll-behavior: smooth;
 }
 
+/* =======================
+   Full Viewport Setup
+   ======================= */
 html, body{
   width: 100%;
   height: 100%;
 }
 
+/* =======================
+   Body Styling
+   ======================= */
 body {
     background: black;
     color: #fdfbfb;
 }
 
+/* stars */
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: black;
+}
+
+/* loader */
+#pre-loader{
+    background: #defa2a  url(image/load.gif) no-repeat center;
+    background-size: 10%;
+    height: 100vh;
+    width:100%;
+    position:fixed;
+    z-index: 100;
+}
+
 #header {
     width: 100%;
-    height: 100vh;
-   
+    height: 100vh;   
     background-size: cover;
     background-position: center;
 }
+
+
+
+/* ==========================
+   Navigation Bar Styling
+========================== */
+.navbar {
+  padding-left: 25px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 25px;
+    margin-top: 1px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: transform 0.3s; /* Added transition for smooth effect */
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+nav ul li:hover a::after,
+nav ul li:focus-visible a::after {
+    width: 100%;
+    scale: 1 1;
+    transform-origin: left;
+}
+ul {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+/* =============================
+   Navigation Logo Text Bounce
+============================= */
 .touch span{
     color: #fff;
-    /* padding: 10px 10px; */
     font-family: poppins;
     display: table-cell;
     font-size: 1em;
     text-decoration: 0 15px 25px rgba(0, 0, 0, 0.5);
-
-
-
 }
 .touch span {
     display: inline-block;
   }
-  
-  .touch:hover span {
+.touch:hover span {
     animation: bounceAnimation 0.5s ;
-  }
-  
-  .touch span:nth-child(1) {
+  }  
+.touch span:nth-child(1) {
     animation-delay: 0.1s;
   }
   .touch span:nth-child(2) {
@@ -108,101 +193,48 @@ body {
       transform: translateY(0);
     }
   }
-  
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 20px 25px;
-    margin-top: 1px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    transition: transform 0.3s; /* Added transition for smooth effect */
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-    border-radius: 5px;
-}
-
-nav ul li:hover a::after,
-nav ul li:focus-visible a::after {
-    width: 100%;
-    scale: 1 1;
-    transform-origin: left;
-}
-
-
-
-
-
-/* Apply animation to text on hover */
-
-
-ul {
-    padding-top: 20px;
-    padding-bottom: 0px;
-}
-
-/* hero sectiom */
-
+/* ========================
+      Hero Section
+======================== */
 .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
-/*   padding: 80px 20px; */
-/*   min-height: 100vh; */
-/*   background: linear-gradient(135deg, #1e293b, #0f172a); */
   text-align: center;
 }
 
 .contents-left {
-  margin-top:130px;
+  margin-top: 130px;
+  margin-right: 200px;
   max-width: 700px;
-   margin-right:200px;
 }
+
 .contents-right {
- 
   width: 300px;
-   
 }
-.contents-right img{
-   width: 300px;
-}
+
+.contents-right img,
 .floating-image {
-  width: 350px;
+  width: 300px;
+}
+
+/* Floating Animation */
+.floating-image {
   animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
 
+/* Hero Text Content */
 .role {
   font-size: 1.1rem;
-  color: #38bdf8;
   font-weight: 500;
+  color: #38bdf8;
   height: 30px;
   margin-bottom: 10px;
 }
@@ -224,13 +256,14 @@ ul {
   margin: 20px 0;
 }
 
+/* CTA Button */
 .cta-button {
   display: inline-block;
   padding: 12px 28px;
   font-size: 1rem;
   font-weight: 600;
-  background-color: #38bdf8;
   color: #0f172a;
+  background-color: #38bdf8;
   border: none;
   border-radius: 8px;
   text-decoration: none;
@@ -240,15 +273,13 @@ ul {
 .cta-button:hover {
   background-color: #0ea5e9;
 }
-}
 
-/* hero section */
 
+/* ------projects----- */
 
 
 
 /* -----scroll-projects----- */
-
 .main-p{
   width: 100%;
   height: 100vh;
@@ -282,7 +313,6 @@ ul {
 #top-h1{
   bottom: 100%;
 }
-
 #bottom{
   position: absolute;
   bottom: 0;
@@ -293,94 +323,6 @@ ul {
 }
 #bottom-h1{
   top: 0% !important;
-}
-
-
-/*----------------portfolio-------*/
-
-#portfolio {
-  padding: 50px 0;
-}
-
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
-}
-
-.work {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.work img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.layer {
-  width: 100%;
-  height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 14px;
-  transition: height 0.5s;
-}
-
-.layer h3 {
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.layer a {
-  margin-top: 20px;
-  color: #ff004f;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.work:hover img {
-  transform: scale(1.1);
-}
-
-.work:hover .layer {
-  height: 100%;
-}
-
-.btn {
-  display: block;
-  margin: 50px auto;
-  width: fit-content;
-  border: 1px solid #ff004f;
-  padding: 14px 50px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #fff;
-  transition: background 0.5s;
-}
-
-.btn:hover {
-  background: #ff004f;
 }
 
 /* content */
@@ -412,20 +354,16 @@ ul {
   color: #0d0d0d;
   font-family: Founder;
 }
-
 .content h2{
   font-size: 50vw;
   font-family: Founder;
 }
-
-
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
-
 .services-list div {
   background: #262622;
   padding: 40px;
@@ -435,18 +373,15 @@ ul {
 
   transition: background 0.5s, transform 0.5s;
 }
-
 .services-list div i {
   font-size: 50px;
   margin-bottom: 30px;
 }
-
 .services-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
 }
-
 .services-list div a {
   text-decoration: none;
   color: #fff;
@@ -454,15 +389,13 @@ ul {
   margin-top: 20px;
   display: inline-block;
 }
-
 .services-list div:hover {
   background: #ff004f;
-  transform: translateY(-10px);}
+  transform: translateY(-10px);
+}
+/* ------projects----- */
+
 /* about */
-/* #about {
-  padding: 80px 0px;
-  color: #ababab;
-} */
 
 #about {
   height:100vh;
@@ -481,26 +414,6 @@ ul {
   width: 100%;
   text-align: center;
 }
-
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fcf6f6;
-  position: relative;
-}
-
-#about h2::after {
-  content: '';
-  width: 60px;
-  height: 4px;
-  background-color: #00bcd4;
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  border-radius: 4px;
-}
-
 #about p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -512,25 +425,21 @@ ul {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .about-col-1 {
   flex-basis: 35%;
-  paddingp:40px;
+  padding:40px;
 }
-
-
 .about-col-1 img {
-  width: 70%;
+  width: 90%;
   border-radius: 15px;
   margin-top:40px;
 }
-
 .about-col-2 {
   flex-basis: 60%;
   padding:40px;
 }
-
 .sub-title {
+  margin-top: 30px;
   font-size: 60px;
   font-weight: 600;
   color: #fff;
@@ -547,8 +456,6 @@ ul {
 .row{
  justify-content: center;
 }
-
-
 .contact-left {
   flex-basis: 35%;
   text-align:center;
@@ -556,28 +463,22 @@ ul {
   margin-left:30px;
   
 }
-
 .contact-right {
   flex-basis: 60%;
   text-align:center;
-   margin-top:50px;
- 
+   margin-top:50px; 
 }
-
 .contact-left p {
   margin-top: 30px;
 }
-
 .contact-left p i {
   color: #ff004f;
   margin-right: 15px;
   font-size: 25px;
 }
-
 .social-icons {
   margin-top: 30px;
 }
-
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
@@ -586,154 +487,317 @@ ul {
   display: inline-block;
   transition: transform 0.5s;
 }
-
 .social-icons a:hover {
   color: #ff004f;
   transform: translateY(-5px);
 }
-
-.btn.btn2 {
+.btn2 {
   display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn2:hover {
   background: #ff004f;
 }
 
-.contact-right form {
-  width: 100%;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  border: 0;
-  outline: none;
-  background: #262622;
-  padding: 15px;
-  margin: 15px 0;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 16px;
-}
-
-form .btn2 {
-  padding: 14px 60px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-}
 
 
-
-/* loader */
-#pre-loader{
-    background: #defa2a  url(image/load.gif) no-repeat center;
-    background-size: 10%;
-    height: 100vh;
-    width:100%;
-    position:fixed;
-    z-index: 100;
-}
-#stars-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: black;
-}
 /*--------------------------------css for small screen--------------------*/
 
-nav ul .star {
-  display: none;
-}
+       /* ====================== Responsive Media Queries ====================== */
 
-div .star {
-  display: none;
-}
+/* Base styles */
 
-@media only screen and (max-width: 600px) {
-  #header {
-      background-image: url();
+/* For tablets and below (768px and smaller) */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  /* Hide hamburger on tablets */
+  .menu-toggle {
+    display: none;
   }
 
-  .header-text {
-      margin-top: 100%;
-      font-size: 16px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 15px 25px;
   }
 
-  .header-text h1 {
-      font-size: 30px;
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding-top: 0;
+    align-items: center;
   }
 
-  nav ul .star {
-      display: block;
-      font-size: 25px;
-      padding-left: 10px;
+  .nav-menu li {
+    margin: 0;
+    text-align: center;
   }
 
-  div .star {
-      display: block;
-      font-size: 25px;
-      padding-bottom: 40px;
+  /* Ensure each link block stretches properly */
+  .nav-menu li a {
+    display: block;
+    padding: 10px 8px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
   }
 
-  nav ul {
-      background: #ff004f;
-      position: fixed;
-      top: 0;
-      right: -220px;
-      width: 220px;
-      height: 100vh;
-      padding-top: 50px;
-      z-index: 2;
-      transition: right 0.5s;
+  /* Ensure .touch div behaves like inline-block */
+  .nav-menu li a .touch {
+    display: inline-block;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
   }
 
-  nav ul li {
-      display: block;
-      margin: 25px;
+  /* Hover effect on the entire word block */
+  .nav-menu li a .touch:hover {
+    transform: translateY(-3px);
   }
 
-  .star {
-      position: absolute;
-      top: 25px;
-      left: 10px;
-      cursor: pointer;
-      padding-left: 300px;
+  /* Per-letter hover animation */
+  .nav-menu li a .touch span {
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
 
-  .sub-title {
-      font-size: 40px;
+  .nav-menu li a .touch span:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+
+  .contents-left {
+    margin-right: 0;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .contents-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .contents-right img,
+  .floating-image {
+    width: 250px;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  #main h1 {
+    font-size: 8vw;
+  }
+
+  .content h3 {
+    font-size: 4vw;
+    width: 100%;
+  }
+
+  .content .btn {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
   }
 
   .about-col-1,
   .about-col-2 {
-      flex-basis: 100%;
+    flex-basis: 100%;
+    padding: 20px;
   }
 
-  .about-col-1 {
-      margin-bottom: 30px;
+  .about-col-1 img {
+    width: 100%;
   }
 
-  .about-col-2 {
-      font-size: 14px;
-  }
-
-  .tab-links {
-      font-size: 16px;
-      margin-right: 20px;
+  .sub-title {
+    font-size: 40px;
   }
 
   .contact-left,
   .contact-right {
-      flex-basis: 100%;
+    flex-basis: 100%;
+    margin: 0;
   }
 }
 
-#msg {
-  color: #61b752;
-  margin-top: -50px;
-  display: block;
-}
 
-      
+
+/* For mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  /* =================== NAVBAR =================== */
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    z-index: 998;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-menu li a:hover {
+    background-color: #333;
+  }
+
+  /* Close button inside mobile nav */
+  .nav-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* =================== HERO SECTION =================== */
+  .hero-section {
+    background: url("image/astronut.png") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-section .contents-left {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .contents-right {
+    display: none;
+  }
+
+  /* =================== TEXT STYLES =================== */
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  /* =================== OTHER SECTIONS =================== */
+  .services-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .main-p,
+  #main {
+    height: auto;
+  }
+
+  #main h1 {
+    font-size: 12vw;
+  }
+
+  .content {
+    margin-top: 50px;
+    gap: 2vh;
+  }
+
+  .content h4 {
+    font-size: 3vw;
+  }
+
+  .content h2 {
+    font-size: 25vw;
+  }
+
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .btn2 {
+    width: 90%;
+    text-align: center;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+}
