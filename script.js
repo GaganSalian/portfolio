@@ -37,13 +37,7 @@ gsap.from(".header-text", {
   ease: "power3.out",
 });
 
-gsap.to(".work-msg", {
-  delay: 2,
-  opacity: 1,
-  y: 0,
-  duration: 1.2,
-  ease: "power3.out"
-});
+
 
 
 
@@ -128,3 +122,10 @@ window.addEventListener('resize', () => {
 
 
 
+// Toggle Side Menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
