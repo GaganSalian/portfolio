@@ -1071,6 +1071,7 @@ ul {
     font-size: 4vw;
     border-radius: 5px;
     transition: background 0.3s ease;
+     margin-bottom:5px;
   }
 
   .btn2:hover {
