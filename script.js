@@ -1,3 +1,6 @@
+gsap.fromTo(".loading-page",{opacity:1},{opacity:0,duration:1.5,delay:3.5
+})
+
 gsap.matchMedia().add("(min-width: 481px)", () => {
   var tl = gsap.timeline({
     scrollTrigger: {
@@ -136,4 +139,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
