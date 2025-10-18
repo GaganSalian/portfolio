@@ -772,6 +772,14 @@ ul {
 /* For mobile devices (480px and below) */
 @media screen and (max-width: 480px) {
 
+   * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 
    html, body{
   width: 100%;
@@ -787,7 +795,16 @@ body {
     background: black;
     color: #fdfbfb;
 }
-
+/* stars */
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: black;
+}
    #header {
     background-color: black;
     color: #fff;
@@ -1157,6 +1174,7 @@ body {
     color: #111;
   }
 }
+
 
 
 
