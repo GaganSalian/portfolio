@@ -772,6 +772,22 @@ ul {
 /* For mobile devices (480px and below) */
 @media screen and (max-width: 480px) {
 
+
+   html, body{
+  width: 100%;
+  height: 100%;
+}
+
+/* =======================
+   Body Styling
+   ======================= */
+body {
+   font-family: "Michroma", sans-serif;
+   height: 100vh;
+    background: black;
+    color: #fdfbfb;
+}
+
    #header {
     background-color: black;
     color: #fff;
@@ -1136,6 +1152,7 @@ ul {
     color: #111;
   }
 }
+
 
 
 
