@@ -47,7 +47,7 @@ body {
     color: #fdfbfb;
 }
 .loading-page{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background:linear-gradient(to right,#2c5364,#203a43,#0f2027);
@@ -58,6 +58,7 @@ body {
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
+    z-index: 9999; /* keep on top */
 }
 #svg{
     height: 150px;
@@ -1212,6 +1213,7 @@ body {
     color: #111;
   }
 }
+
 
 
 
