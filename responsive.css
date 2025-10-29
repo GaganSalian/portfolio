@@ -1,0 +1,215 @@
+/* 💻 Desktop (max 2560px) */
+@media (max-width: 2560px) {
+  .hero_logo {
+    width: 450px;
+    top: 100px;
+    left: 80px;
+  }
+
+  .icon {
+    width: 70px;
+  }
+
+  .react { top: 15%; left: 75%; }
+  .js { top: 65%; left: 85%; }
+  .node { top: 40%; left: 10%; }
+  .github { top: 80%; left: 30%; }
+}
+
+/* 💻 Laptop (max 1440px) */
+@media (max-width: 1440px) {
+  .hero_logo {
+    width: 330px;
+    top: 100px;
+    left: 40px;
+  }
+
+  .icon {
+    width: 55px;
+  }
+
+  .react { top: 10%; left: 70%; }
+  .js { top: 60%; left: 82%; }
+  .node { top: 45%; left: 15%; }
+  .github { top: 78%; left: 25%; }
+}
+
+/* 📱 Tablet (max 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+
+  .hero-section .content {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .hero_logo {
+    width: 250px;
+    top: 120px;
+    margin-bottom: 2rem;
+    left: 0;
+  }
+
+  /* Floating icons smaller and closer */
+  .icon {
+    width: 40px;
+  }
+
+  .react { top: 10%; left: 70%; }
+  .js { top: 65%; left: 100%; }
+  .node { top: 30%; left: 1%; }
+  .github { top: 80%; left: 1%; }
+
+
+     .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-left, .contact-right {
+    flex: 1 1 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .qr-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+
+  
+/* 📱 Mobile (max 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero_logo {
+    width: 200px;
+    top: 0;
+  }
+
+  /* Optional: Hide icons for clarity on small screens */
+  .floating-icons {
+    display: none;
+  }
+
+  #top,
+  #bottom,
+  #top-h1,
+  #bottom-h1 {
+    display: none; /* hide all GSAP split layers */
+    padding: 0;
+  }
+
+  #project{
+    padding: 0;
+  }
+    #main {
+    height: auto; 
+    overflow: hidden;
+  }
+
+   #project-center {
+    height: auto;
+      display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 10px;
+  padding: 20px 10px;
+ display: flex;
+  }
+
+   .project-content {
+    display: flex;
+    flex: 1;
+     flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    gap: 2rem;
+    overflow-x: hidden; 
+  }
+
+.project-wrapper {
+   padding-left: 0;
+  }
+
+  .project-img{
+    width: 300px;
+    height: 300px;
+  }
+
+  
+}
+ 
+
+/* 🧱 Extra Small screens (320px) */
+@media (max-width: 320px) {
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero_logo {
+    width: 180px;
+  }
+  /* Optional: smaller scrollbars or hidden */
+  .project-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
